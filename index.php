@@ -21,7 +21,7 @@ require_once($HERE . 'res/php/utils.php');
 
         <title>ACM @ RU</title>
 
-        <link type='text/css' rel='stylesheet' href='res/less/theme.css' />
+        <link type='text/css' rel='stylesheet' href='res/css/bootstrap.min.css' />
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -62,6 +62,6 @@ require_once($HERE . 'res/php/utils.php');
         <!-- jQuery -->
         <script type='text/javascript' src='res/js/jquery-1.11.1.min.js'></script>
         <!-- Bootstrap plugins -->
-        <script type='text/javascript' src='res/bootstrap/dist/js/bootstrap.min.js'></script>
+        <script type='text/javascript' src='res/js/bootstrap.min.js'></script>
     </body>
 </html>
