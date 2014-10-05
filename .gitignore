@@ -1,0 +1,5 @@
+# do NOT include phpBB install in version control!
+forum/
+
+# exclude .html files in the php directory: these are usually generated in testing by php -f
+*.html
