@@ -1,0 +1,30 @@
+{
+    "items": [
+        {
+            "name": "About",
+            "link": "https://php.radford.edu/~acm/about.php"
+        },
+        {
+            "name": "Events",
+            "items": [
+                {
+                    "name": "Mid-Atlantic Region ICPC",
+                    "link": "http://www.radford.edu/acm/midatl/"
+                }
+            ]
+        },
+        {
+            "name": "Guides",
+            "items": [
+                {
+                    "name": "Coming soon",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "name": "Forum",
+            "link": "https://php.radford.edu/~acm/forum"
+        }
+    ]
+}
