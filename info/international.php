@@ -30,7 +30,7 @@ require_once $HERE . "../res/php/top.php";
         professionals in more than 100 countries in all areas of industry, academia, and
         government.
     </p><p>
-        Joining the ACM as a student provides access to many benefits.  Here ares just a few:
+        Joining the ACM as a student provides access to many benefits.  Here are just a few:
         <ul>
             <li>Free access to software through the ACM Student Academic Initiative</li>
             <li>Access to online courses, online books, and webinars</li>
