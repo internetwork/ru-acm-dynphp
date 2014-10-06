@@ -11,7 +11,7 @@ require_once dirname(__FILE__) . "/utils.php";
 
         <title>ACM @ RU</title>
 
-        <link type='text/css' rel='stylesheet' href='<?php echo dirname(__FILE__) . "/../css/bootstrap.min.css"; ?>' />
+        <link type='text/css' rel='stylesheet' href='https://php.radford.edu/~acm/res/css/bootstrap.min.css' />
 
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
