@@ -40,7 +40,7 @@ require_once $HERE . "../res/php/top.php";
         </ul>
         Fees vary depending on the membership level you purchase, starting at $19.  (You may
         also have access to free student memberships through participation in ICPC or
-        membership in the Upsilon Pi Upsilon honor society.)
+        membership in the Upsilon Pi Epsilon honor society.)
     </p><p>
         For more information, including a full list of benefits and membership options,
         check out <?php echo hyperlink('http://www.acm.org/membership/student'); ?>
