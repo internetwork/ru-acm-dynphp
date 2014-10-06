@@ -14,40 +14,25 @@ function hyperlink($url, $linkTxt=false) {
  * by reading nav elements from a json file
  */
 function makeNav() {
-    $result = "<ul class='nav navbar-right navbar-nav'>" . PHP_EOL;
+    $result = "<ul class='nav navbar-right navbar-nav'>\n";
 
     // get nav file as string
-    $navFile = dirname(__FILE__) . '/../const/nav.json';
-    $jsonStr = file_get_contents($navFile);
-    // parse string as json
-    $jsonObj = json_decode($jsonStr);
-
-    // iterate through object to create list
-    $result .= makeNavLinkList($jsonObj->items);
+    $navFile = dirname(__FILE__) . '/../json/nav.json';
+    $result .= jsonFileArrayToStr($navFile, "makeNavItem");
 
     // return html
-    return $result . "</ul>" . PHP_EOL;
+    return $result . "</ul>\n";
 }
 
-/*
- * Given an array of objects, create list items for each object in the list
- * Objects must have a "name" property and either a "link" property or "items" property
- * Objects w/ a link property are turned into a single list item w/ makeNavLink();
- * objects with an 'items' property are turned into a dropdown list item using makeNavDropDown()
- */
-function makeNavLinkList($linkArr) {
-    $result = '';
-    foreach ($linkArr as $item) {
-        // is it a single link or dropdown?
-        if (property_exists($item, "items")) {
-            $result .= makeNavDropDown($item);
-        }
-        elseif (property_exists($item, "link")) {
-            $result .= makeNavLink($item);
-        }
+function makeNavItem($item) {
+    if (property_exists($item, "items")) {
+        return makeNavDropDown($item);
     }
-    return $result;
+    elseif (property_exists($item, "link")) {
+        return makeNavLink($item);
+    }
 }
+
 
 /*
  * Creates a single navigation list item
@@ -66,11 +51,31 @@ function makeNavDropDown($ddObj) {
     $name = $ddObj->name;
     $result = "<li class='dropdown'>
         <a href='#' class='dropdown-toggle' data-toggle='dropdown'>$name <span class='caret'></span></a>
-        <ul class='dropdown-menu' role='menu'>" . PHP_EOL;
+        <ul class='dropdown-menu' role='menu'>\n";
 
-    $result .= makeNavLinkList($ddObj->items);
+    $result .= jsonArrayToStr($ddObj->items, "makeNavItem");
 
     return $result . "</ul>\n</li>\n";
+}
+
+
+/*
+ * Given path to a json file, assumes that the top level element
+ * in the file is an array of objects. Reduces the array to a string
+ * by mapping each object through the given function and
+ * imploding the mapped array
+ */
+function jsonFileArrayToStr($jsonPath, $mapFunc) {
+    $arr = json_decode(file_get_contents($jsonPath));
+    return jsonArrayToStr($arr, $mapFunc);
+}
+
+/*
+ * Map each object in a json array of objects with the given function
+ * and implode the resulting array
+ */
+function jsonArrayToStr($jsonArr, $mapFunc) {
+    return implode("", array_map($mapFunc, $jsonArr));
 }
 
 ?>
