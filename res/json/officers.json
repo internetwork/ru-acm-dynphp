@@ -1,0 +1,22 @@
+[
+    {
+        "title": "President",
+        "name": "Ben Zepp",
+        "email": "bzepp@radford.edu"
+    },
+    {
+        "title": "Vice President",
+        "name": "Forrest Meade",
+        "email": "fmeade@radford.edu"
+    },
+    {
+        "title": "Treasurer",
+        "name": "Brandyn Price",
+        "email": "bprice18@radford.edu"
+    },
+    {
+        "title": "Secretary",
+        "name": "Matthew Seiler",
+        "email": "mseiler2@radford.edu"
+    }
+]
