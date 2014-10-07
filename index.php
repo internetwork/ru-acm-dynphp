@@ -16,7 +16,8 @@ require_once $HERE . "/res/php/top.php";
         <!-- begin main page content -->
         <div class='container'>
             <h1>Hello</h1>
-            <p>We'll get there eventually</p>
+            <p>Work in progess. We'll get there eventually.</p>
+            <p>In the mean time, check our <a href="forum">forum</a> for news and announcements!</p>
         </div><!-- /.container -->
 
 <?php
